@@ -16,8 +16,7 @@ namespace MottuChallenge.API.Data
         {
             base.OnModelCreating(modelBuilder);
 
-            // ✅ CONFIGURAÇÃO BOOLEAN PARA ORACLE
-            foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+             foreach (var entityType in modelBuilder.Model.GetEntityTypes())
             {
                 foreach (var property in entityType.GetProperties())
                 {
@@ -28,8 +27,7 @@ namespace MottuChallenge.API.Data
                 }
             }
 
-            // CONFIGURAÇÕES DAS ENTIDADES
-            modelBuilder.Entity<Patio>(entity =>
+             modelBuilder.Entity<Patio>(entity =>
             {
                 entity.HasKey(p => p.NomePatio);
                 entity.Property(p => p.NomePatio).HasMaxLength(50);
