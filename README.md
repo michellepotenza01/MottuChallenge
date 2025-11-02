@@ -114,7 +114,6 @@ graph TB
     AS --> JWT
     HS --> HC
 ```
-![Diagrama de Arquitetura](<Diagrama_de_arquitetura.png>)
 
 
 ### Explicação da Arquitetura
@@ -561,14 +560,14 @@ Versionamento da API
 
 ### Exemplos de Uso por Versão
 
-http
+```http
 
 # V1 - Endpoint básico
 GET /api/v1/Moto
 
 # V2 - Com paginação e estatísticas
 GET /api/v2/Moto/paged?pageNumber=1&pageSize=10
-
+```
 Health Checks e Monitoramento
 -----------------------------
 
@@ -609,11 +608,11 @@ O sistema utiliza [ML.NET](https://ml.net/) para prever a necessidade de manut
 
 ### Endpoint de Predição
 
-http
+```http
 
 GET /api/v1/Moto/{placa}/prever-manutencao
 Authorization: Bearer {token}
-
+```
 Exemplos de Uso
 ---------------
 
